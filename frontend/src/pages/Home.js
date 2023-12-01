@@ -28,18 +28,8 @@ const Home = () => {
 
   return (
     <div className="home">
-
-       <div style={{display:'flex',flexDirection:'column',color:'white'}}>
-       
-       <span className='shinee'><h1>👋🏻 ,{user.name}</h1> </span><h3> Your code for today: conquerTheDay();🚀</h3>
-           
-           <br></br> Did you checked out today's TECH news?
-    
-         <div className="video">
-      <ReactPlayer url={'https://youtu.be/1p7_4ZuP0Y4?si=NlOwNQg8WTdvFMYu'}></ReactPlayer>
-      </div>
-      </div> 
-      <div className="workfit">
+      
+     <div className="workfit">
       <WorkoutForm />
        <div className="workouts">
         {workouts && workouts.map((workout) => (
@@ -48,8 +38,23 @@ const Home = () => {
        </div>
        
       </div>
+      <div className='bkg'>
+      <div className='bright-glowing-text'>
+       Hey {user.name} ,Let's Zooming into success - where every click counts, and every collaboration creates magic!
+      </div>
+      <div >
+        
+
+      </div>
+      <div className="video">
+        <h4>Did You Ignite Your Day with Today's Tech Thrills? </h4>
+      <ReactPlayer url={'https://youtu.be/1p7_4ZuP0Y4?si=NlOwNQg8WTdvFMYu'}></ReactPlayer>
+      </div>
+      </div>
+     
       
-    </div>
+      
+</div>
   )
 }
 

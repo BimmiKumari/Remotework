@@ -5,6 +5,7 @@
 :root {
   --primary:rgb(52, 52, 230);
   --error: #e7195a;
+  --liteColor:rgb(198, 196, 196);
 }
 body {
   background-color:#02042a;
@@ -41,7 +42,7 @@ header a {
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 100px;
+  gap: 6px;
   
 }
 .workout-details {
@@ -73,7 +74,6 @@ header a {
   color: #333;
 }
 
-/* new workout form */
 label, input {
   display: block;
 }
@@ -125,14 +125,14 @@ nav button {
   cursor: pointer;
   font-size: 1em;
 }
-
-/* auth forms */
 form.signup, form.login {
-  max-width: 400px;
+  min-width: 360px;
   margin: 40px auto;
   padding: 20px;
-  background: #fff;
-  border-radius: 4px;
+  background: #02042a;
+  border-radius: 30px;
+  color:white;
+  border:2px solid #3498db;
 }
 .create{
   background:#02042a;
@@ -154,14 +154,13 @@ form.signup, form.login {
 .workfit{
   background:#02042a;
   width:300px;
-  height:300px;
+  height:510px;
   padding:10px;
   border-radius:10px;
   display:flex;
   flex-direction:column;
   margin-top:2px;
-  
-  margin-right:8px;
+  margin-right:0px;
   overflow-y: scroll;
 }
 .loGo{
@@ -198,7 +197,7 @@ form.signup, form.login {
 }
 
 .profit{
-  background-color: white;
+  background-color:#02042a ;
   width:300px;
   height:405px;
   border-radius:5px;
@@ -219,7 +218,7 @@ form.signup, form.login {
   flex-direction:column;
   width:334px;
   height:750px;
-  background-color:skyblue;
+  background-color:#02042a;
   padding-top:20px;
   padding-left: 20px;
   
@@ -229,7 +228,7 @@ form.signup, form.login {
   flex-direction:column;
   width:1030px;
   height:750px;
-  background-color:skyblue;
+  background-color:#02042a;
   padding-top:20px;
   padding-left:1px;
 }
@@ -239,13 +238,14 @@ form.signup, form.login {
   padding-left:2px;
 }
 .info{
-    background-color: white;
+    background-color: #02042a;
     width:1000px;
     height:350px;
     border-radius:5px;
     margin-bottom: 30px;
     margin-top: 0px;
-    margin-left:2px;
+    margin-left:20px;
+    overflow-y: scroll;
 }
 .Project{
     background-color: white;
@@ -264,6 +264,10 @@ form.signup, form.login {
   height:140px;
   border-radius:5px 5px 0px 0px;
   margin-bottom: 30px;
+  color:white;
+  
+  display :flex;
+  flex-direction:column;
 }
 .progress{
   padding-left:80px;
@@ -305,9 +309,11 @@ form.signup, form.login {
   display: inline-block;
 }
 .video{
-  margin-top:20px;
+  margin-top:10px;
+  margin-left:20px;
   display: flex;
-  flex-direction:row;
+  flex-direction:column;
+  color:white;
 }
 .shinee{
   color:white;
@@ -321,3 +327,58 @@ form.signup, form.login {
   
   
 }
+
+@keyframes glow {
+  
+  50% {
+    text-shadow: 0 0 20px rgb(8, 248, 236), 0 0 30px rgb(11, 247, 235), 0 0 40px rgb(0, 251, 255);
+  }
+  100% {
+    text-shadow: 0 0 10px white, 0 0 20px #02042a, 0 0 30px#02042a;
+  }
+}
+.bright-glowing-text {
+  justify-content: center;
+  align-items: center;
+  font-size: 2em; 
+  font-weight: bold;
+  color: #fff; 
+  margin:20px;
+  animation: glow 2s infinite;
+}
+
+.bkg{
+  background-image:url('./assets/nyabg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:600px; 
+  margin: 0; 
+  width:1040px;
+  box-shadow: 10px 10px lightblue;
+  opacity: 0.8;
+}
+/*Calender */
+.App {
+  text-align: center;
+  margin:20px;
+ 
+}
+.topic{
+  color:white;
+  font-size:40px;
+}
+.add_topic{
+  color:white;
+  margin-top: 15px;
+}
+.add-event{
+  color:white;
+  padding: 50px;
+}
+.sign{
+  box-shadow: 10px 10px lightblue;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+

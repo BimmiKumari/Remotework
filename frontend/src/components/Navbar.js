@@ -19,14 +19,19 @@ const Navbar = () => {
         <Link to="/">
           <h1 className='loGo'>NovaLink <img src={Image} alt='not loaded' width='50px'  /> </h1>
         </Link>
-        <nav >
+        <nav style={{color:'white'}} >
           {user && (
-            <div>
-               <Link to="/">Home</Link>
-              <span>{user.email}</span>
+            <div style={{color:'white',columnGap:'40px'}}>
+              <Link to="/" style={{color:'white',margin:'10px'}}>Home</Link>
+              <Link to='/record' style={{color:'white',margin:'10px'}}>Recorder</Link>
+              <Link to="/email" style={{color:'white',margin:'10px'}}>Help Center</Link>
+              <Link to="/event"  style={{color:'white',margin:'10px'}}>SharedCalender</Link>
+              <Link to="/profile" style={{color:'white' ,margin:'10px'}}>profile</Link>
+              <Link to="/tra" style={{color:'white' ,margin:'10px'}}>Tralink</Link>
+
+              <a href='https://novalinktaskmanager.netlify.app/'style={{color:'white',margin:'10px'}}>Task Manager</a>
+             <button style={{color:'#02042a'}}> <a href='https://novalinkmeetingroom.netlify.app/' >Meeting Room</a></button>
               <button onClick={handleClick}>Log out</button>
-              <Link to="/email">Email us</Link>
-              <Link to="/profile">profile</Link>
               
             </div>
           )}

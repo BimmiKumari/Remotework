@@ -7,7 +7,10 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 import Emailsend from './components/Emailsend'
-
+import ScreenRecording from './components/ScreenRecording';
+import Calender from './components/Calender';
+import Recorder from './components/Recorder'
+import Tralink from './components/Tralink'
 function App() {
   const { user } = useAuthContext()
 
@@ -21,13 +24,33 @@ function App() {
               path="/" 
               element={user ? <Home /> : <Navigate to="/login" />} 
             />
+            
+            <Route 
+              path="/screenRecorder" 
+              element={user ? <ScreenRecording /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/record" 
+              element={user ? <Recorder /> : <Navigate to="/login" />} 
+            />
+             <Route 
+              path="/tra" 
+              element={user ? <Tralink /> : <Navigate to="/login" />} 
+            />
+            
+
+             <Route 
+              path="/event" 
+              element={user ? <Calender/> : <Navigate to="/login" />} 
+            />
+
             <Route 
               path="/login" 
               element={!user ? <Login /> : <Navigate to="/" />} 
             />
             <Route 
               path="/signup" 
-              element={!user ? <Signup /> : <Navigate to="/profile" />} 
+              element={!user ? <Signup /> : <Navigate to="/" />} 
             />
              <Route 
               path="/email" 

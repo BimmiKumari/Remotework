@@ -16,9 +16,9 @@ import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
 import LinearProgress from '@mui/joy/LinearProgress';
 const data = [
     { value: 15, label: 'P' },
-    { value: 8, label: 'G' },
     { value: 8, label: 'E' },
-    { value: 30, label: 'H' },
+    { value: 30, label: 'W' },
+    { value: 10, label: 'R' },
   ];
   
   const size = {
@@ -27,7 +27,7 @@ const data = [
   };
   
 export default function ProfilePage() {
-    const inputRef = React.useRef(null);
+   
     const [variant, setVariant] = React.useState('soft');
     const { user } = useAuthContext()
   return (
@@ -48,12 +48,12 @@ export default function ProfilePage() {
           </Typography>
           </CardContent>
           <CardActions buttonFlex="0 1 120px">
-          <Button variant="outlined" color="neutral">Update</Button>
+          <Button variant="outlined" className='Marks'>Update</Button>
           </CardActions>
         </Card>
     
         <input style={{height:'100px'}}></input>
-         <Button variant="outlined" color="neutral">
+         <Button variant="outlined" >
          Change about
         </Button>        
         </div>
@@ -78,10 +78,9 @@ export default function ProfilePage() {
       
         <div className="file2">
             <div className="info">
-              
-            <Stack spacing={1.5} sx={{ minWidth: 300 }}>
-       
-          <Input
+              <Stack spacing={1.5} sx={{ minWidth: 300 }}>
+              <label style={{color:'white',marginleft:'20px'}}>Enter your date of birth :</label>
+            <Input style={{width:'1000px'}}
            type="date"
            slotProps={{
            input: {
@@ -91,6 +90,15 @@ export default function ProfilePage() {
         }}
       />
     </Stack>
+    <label style={{color:'white',marginleft:'20px'}}>Enter your linkedin url:</label>
+    <input placeholder="https://www.linkedin.com/in/"></input>
+    <label style={{color:'white',marginleft:'20px'}}>Enter your Github url:</label>
+            <input type="text" placeholder='https://www.github.com/in/' />
+    <label style={{color:'white',marginleft:'20px'}}>Enter correspondence address:</label>
+            <input type="text" placeholder='https://www.github.com/in/' />
+            <button className='Marks'>Create profile</button>
+                 
+
                 
  </div>
 
@@ -98,7 +106,11 @@ export default function ProfilePage() {
             
         <div className="Project" >
 
-          <div className="text"></div>
+          <div className="text">
+               <h2 className='bright-glowing-text'>Track your Progress</h2>
+              <div style={{ paddingLeft:'30px'}}> P : Project progress &nbsp;&nbsp; E : Exercise contribution &nbsp;&nbsp;  W : Work Hour &nbsp;&nbsp; R : Engagement With Employee</div>
+
+          </div>
             <div className='progress'>        
             <Box sx={{ width: '800px', display: 'flex',alignItems: 'center',gap: 4,
       }}
@@ -143,7 +155,7 @@ export default function ProfilePage() {
     </Box>
 
     </div> 
-             </div>
+     </div>
 
 
        </div>
