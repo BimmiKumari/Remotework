@@ -7,7 +7,7 @@ const emailRoutes = require("./routes/emailRoutes");
 const app = express()
 const cors = require("cors");
 const corsOptions = {
-  origin: "*",
+  origin: "https://novalink-api.vercel.app/",
   credentials: true, 
   optionSuccessStatus: 200,
 };
