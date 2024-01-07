@@ -8,9 +8,9 @@ import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 import Emailsend from './components/Emailsend'
 import ScreenRecording from './components/ScreenRecording';
+import Recorder from './components/Recorder';
 import Calender from './components/Calender';
-import Recorder from './components/Recorder'
-import Tralink from './components/Tralink'
+import Otpverify from './components/Otpverify';
 function App() {
   const { user } = useAuthContext()
 
@@ -33,15 +33,14 @@ function App() {
               path="/record" 
               element={user ? <Recorder /> : <Navigate to="/login" />} 
             />
-             <Route 
-              path="/tra" 
-              element={user ? <Tralink /> : <Navigate to="/login" />} 
+              <Route 
+              path="/calender" 
+              element={user ? <Calender/> : <Navigate to="/login" />} 
             />
             
-
              <Route 
-              path="/event" 
-              element={user ? <Calender/> : <Navigate to="/login" />} 
+              path="/help" 
+              element={user ? <Emailsend/> : <Navigate to="/login" />} 
             />
 
             <Route 
@@ -60,7 +59,14 @@ function App() {
               path="/profile" 
               element={user ? <Profile/> : <Navigate to="/login" />} 
             />
+             <Route 
+              path="/verify" 
+              element={<Otpverify/>}
+            />
+            
           </Routes>
+          
+
         </div>
       </BrowserRouter>
       <Toaster />

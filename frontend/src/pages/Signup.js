@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { useSignup } from "../hooks/useSignup"
 import { toast } from 'react-hot-toast';
-import Image from '../assets/signup.png'
   const Signup = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -44,14 +43,12 @@ import Image from '../assets/signup.png'
         style={{borderRadius:'25px'}}
       />
       
-
-      
       <button style={{borderRadius:'10px'}} disabled={isLoading}>Sign up</button>
       {error && <div className="error">{error}</div>}
     </form>
     </div>
     <div className="sign">
-      <img style={{borderRadius:'50%'}} src={Image} alt='signup bg' width='400px' height='400px'/>
+      <img  src="https://media.giphy.com/media/qVLeR93GlvsfKPT5pj/giphy.gif" alt='signup bg' width='460px' height='460px'/>
     </div>
     </div>
   )

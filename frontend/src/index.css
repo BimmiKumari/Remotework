@@ -309,11 +309,12 @@ form.signup, form.login {
   display: inline-block;
 }
 .video{
-  margin-top:10px;
-  margin-left:20px;
+  margin:auto;
   display: flex;
   flex-direction:column;
   color:white;
+  height: 400px;
+  width:800px;
 }
 .shinee{
   color:white;
@@ -348,7 +349,7 @@ form.signup, form.login {
 }
 
 .bkg{
-  background-image:url('./assets/nyabg.png');
+  background-image:url('https://media.giphy.com/media/1pmatQ3LcP5XFYxSWF/giphy-downsized-large.gif');
   background-size: cover;
   background-repeat: no-repeat;
   height:600px; 
@@ -357,6 +358,7 @@ form.signup, form.login {
   box-shadow: 10px 10px lightblue;
   opacity: 0.8;
 }
+
 /*Calender */
 .App {
   text-align: center;
@@ -377,8 +379,59 @@ form.signup, form.login {
 }
 .sign{
   box-shadow: 10px 10px lightblue;
-  border-radius: 50%;
   object-fit: cover;
 }
+.grid-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 25px;
+  margin-top: 10px;
+  color: #fbf2f2;
+}
+.assist{
+  color:white;
+  background-color: #e7195a;
+  width: 500px;
+  height:300px;
+}
+.grid-child {
+  border: 2px solid whitesmoke;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(21, 193, 41);
+}
+
+.grid-child:hover {
+  background-color: rgb(11, 6, 43);
+  color: #0f0e0e;
+}
+.grid-child h3 {
+  font-weight: 700;
+  color: #fbf2f2;
+}
+.grid-child p {
+  font-weight: 500;
+  font-size: 15px;
+  color: #fbf2f2;
+}
+
+.text-area {
+  font-size: 20px;
+  padding: 10px;
+  color: black;
+
+}
+
+.result-text {
+ width:850px;
+ height:200px;
+ border-radius:25px;
+ overflow-y: scroll;
+ background-color: #02042a;
+ color: white;
+
+}
+
 
 

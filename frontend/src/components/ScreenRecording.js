@@ -13,16 +13,10 @@ const RecordView = () => {
         render={({ status, startRecording, stopRecording, mediaBlobUrl }) => (
           <div style={{marginLeft:'10px'}}>
             <h4>Screen Recorder</h4>
-            {/*  recording status */}
             <h2 className='bright-glowing-text'>Status :  {status}</h2>
-
-
-            {/* Start Recording button */}
             <h4 className='shinee'>Capture your error and share it to co-memebers </h4>
             Note : <h6>1. Click on green play button to start recoding</h6>
             <h6>2.Click on red pause button to stop.</h6>
-            
-           
             <button
               onClick={() => {
                 startRecording();
@@ -40,8 +34,6 @@ const RecordView = () => {
             >
               <FaPlay />
             </button>
-
-            {/*  render the Stop  button  */}
             {isRecording && status !== "idle" && (
               <div className="stop-button-dropdown">
                 <button
@@ -65,7 +57,6 @@ const RecordView = () => {
               </div>
             )}
 
-            {/* Conditionally render the video screen only when recording is completed */}
             {status === "stopped" && mediaBlobUrl && isVideoPlaying && (
               <div>
                 <video

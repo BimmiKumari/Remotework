@@ -53,7 +53,7 @@ const WorkoutForm = () => {
   }
  return (
     <form className="create" onSubmit={handleSubmit}>
-      <h4 className="shine"> <span>Workfit</span> : "Schedule Success, Energize Wellness!"</h4>
+      <h4 className="shine"> <span>Workfit</span> : "365days of fitness challenge "</h4>
       <label>Excercise/Yoga Title:</label>
       <input 
         type="text"

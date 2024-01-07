@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from 'react-router-dom'
 import { useLogin } from "../hooks/useLogin"
 import { toast } from 'react-hot-toast';
 const Login = () => {
@@ -33,8 +34,9 @@ const Login = () => {
         value={password} 
         style={{borderRadius:'25px'}}
       />
-
       <button style={{borderRadius:'10px'}} disabled={isLoading}>Log in</button>
+       <Link to='/verify'><h5 style={{color:'white'}}> OTP Verification </h5></Link>
+    
       {error && <div className="error">{error}</div>}
     </form>
     </div>

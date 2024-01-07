@@ -1,7 +1,4 @@
-import {
-    Flex,
-    Box,
-    FormControl,
+import { Flex, Box,FormControl,
     FormLabel,
     Input,
     Stack,
@@ -11,6 +8,7 @@ import {
     Textarea,
   } from "@chakra-ui/react";
   import { useState } from "react";
+  import { IoSearch } from "react-icons/io5";
   
   export default function MyForm() {
     const [email, setEmail] = useState("");
@@ -25,7 +23,6 @@ import {
         subject: subject,
         message: message,
       };
-  
       const res = await fetch(`${baseUrl}/email/sendEmail`, {
         method: "POST",
         body: JSON.stringify(dataSend),
@@ -45,16 +42,23 @@ import {
         });
     };
     return (
-      <Flex align={"center"} justify={"center"} style={{backgroundColor:'#02042a',color:'white'}} >
-        
+      <div>
+      <Flex align={"center"} justify={"center"} style={{backgroundColor:'#02042a',color:'white'}} > 
         <Stack align={"center"}>
           <Stack align={"center"}>
             <Heading >
-            <h4 className='bright-glowing-text'>  Invite for faster problem-solving.</h4></Heading>
+            <h4 className='bright-glowing-text'>  Invite for Help or Collaborate.</h4></Heading>
+            <div style={{display:"flex",flex:"row"}}>
+            <input  style={{borderTopLeftRadius:'50px',borderBottomLeftRadius:'50px',width:'500px',}} type="search" placeholder='Search'></input><IoSearch  style={{color:"black", backgroundColor:"white",width:"45px",height:"38px",marginTop:"10px",borderTopRightRadius:'50px',borderBottomRightRadius:'50px'}}/>
+            </div>
+            
+           
+
             <Text className="shinee">
             Need Help ? then Invite others to collaborate on projects .
             </Text>
           </Stack>
+          
           <Box
           style={{backgroundColor:'#02042a'}}
           >
@@ -96,5 +100,6 @@ import {
           </Box>
         </Stack>
       </Flex>
+      </div>
     );
   }

@@ -9,7 +9,6 @@ const RecordView = () => {
 
   return (
     <div style={{color :'white',border:'2px solid #3498db',height:'600px'}}>
-     
       <ReactMediaRecorder
         video
         render={({ status, startRecording, stopRecording, mediaBlobUrl }) => (
@@ -58,9 +57,6 @@ const RecordView = () => {
                 </button>
               </div>
             )}
-           
-
-            {/* render */}
             {status === "stopped" && mediaBlobUrl && isVideoPlaying && (
               <div>
                 <video
@@ -89,13 +85,11 @@ const RecordView = () => {
                   <FaTimes />
                 </button>
               </div>
-              
-            )}
+        )}
           </div>
         )}
       />
-      
-    </div>
+</div>
   );
 };
 

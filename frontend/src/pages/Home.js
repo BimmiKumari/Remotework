@@ -1,9 +1,10 @@
 import { useEffect }from 'react'
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
-import ReactPlayer from 'react-player'
 import WorkoutDetails from '../components/WorkoutDetails'
 import WorkoutForm from '../components/WorkoutForm'
+import Assitant from '../Assitant'
+
 
 const Home = () => {
   const {workouts, dispatch} = useWorkoutsContext()
@@ -40,15 +41,14 @@ const Home = () => {
       </div>
       <div className='bkg'>
       <div className='bright-glowing-text'>
-       Hey {user.name} ,Let's Zooming into success - where every click counts, and every collaboration creates magic!
+       Hey {user.name}👋I am your Assistant <b>NOVA 🤖</b>
       </div>
       <div >
         
 
       </div>
       <div className="video">
-        <h4>Did You Ignite Your Day with Today's Tech Thrills? </h4>
-      <ReactPlayer url={'https://youtu.be/1p7_4ZuP0Y4?si=NlOwNQg8WTdvFMYu'}></ReactPlayer>
+       <Assitant/>
       </div>
       </div>
      
